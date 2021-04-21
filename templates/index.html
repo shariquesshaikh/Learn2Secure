@@ -3,7 +3,14 @@
 {% block content %}
 
     <div class="container mt-lg-5 mt-5 pt-5">
-        <div class="row mb-4 d-none d-lg-block">
+        <div class="row align-items-center mb-3" align="center">
+            <div class="col">
+                <h2 class="font-weight-bold" style="color:black; text-align: left">
+                    Welcome Furqaan Thakur!
+                </h2>
+            </div>
+        </div>
+        <div class="row mb-4 d-none d-lg-hidden">
             <div class="col">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -13,7 +20,8 @@
                     </ol>
                     <div class="carousel-inner" style="border-radius: 15px">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="{{ url_for('static',filename='img/SIH - SGRP (3).png') }}"
+                            <img class="d-block w-100"
+                                 src="{{ url_for('static',filename='img/SIH - SGRP (3).png') }}"
                                  alt="First slide"
                                  height="250" style="object-fit: cover ; object-position: top;">
                             <div class="carousel-caption d-none d-md-block">
@@ -43,15 +51,60 @@
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                       data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                       data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+            </div>
+        </div>
+
+        <div style="text-align: center"><h5>Select your level and get started! </h5></div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-6">
+                <a href="/basics">
+                    <div class="options" style="cursor: pointer">
+                        <div>
+                            <img src="{{ url_for('static',filename='img/black.jpg') }}" class="options-img"/>
+                        </div>
+                        <div class="options-title p-2"><span class="fas fa-star"></span><span
+                                class="far fa-star"></span><span class="far fa-star"></span><br>
+                            Beginner
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-6">
+                <a href="/intermediate">
+                    <div class="options" style="cursor: pointer">
+                        <div>
+                            <img src="{{ url_for('static',filename='img/black.jpg') }}" class="options-img"/>
+                        </div>
+                        <div class="options-title p-2"><span class="fas fa-star"></span><span
+                                class="fas fa-star"></span><span class="far fa-star"></span><br>
+                            Intermediate
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-6">
+                <a href="/advanced">
+                    <div class="options" style="cursor: pointer">
+                        <div>
+                            <img src="{{ url_for('static',filename='img/black.jpg') }}" class="options-img"/>
+                        </div>
+                        <div class="options-title p-2"><span class="fas fa-star"></span><span
+                                class="fas fa-star"></span><span class="fas fa-star"></span><br>
+                            Advanced
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="row">
@@ -115,12 +168,18 @@
                     <div class="card-custom p-4 mb-4">
                         <span class="jump-link" id="process"></span>
                         <div class="card-block">
-                            <h5 class="mt-2 card-custom-title" style="text-transform: uppercase; text-align: center">
+                            <h5 class="mt-2 card-custom-title"
+                                style="text-transform: uppercase; text-align: center">
                                 Learn 2 Secure</h5>
                             <h6 class="mb-4 mt-1 text-muted" style="text-align: center">Learn2Secure</h6>
                             <p class="text-muted" style="text-align: justify">
-                                This is a IDK.</p>
+                                Something avout L22S......</p>
                             <h6 style="text-align: right"></h6>
+                            <a href="/basics">
+                                <button class="btn btn-outline-dark w-100">
+                                    Learn the Basics
+                                </button>
+                            </a>
                         </div>
                     </div>
 
@@ -167,10 +226,6 @@
                                 Email : email@gmail.com <br>
                             </p>
                             <br>
-                            {#                        <iframe class="w-100"#}
-                            {#                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15091.497054398025!2d72.8143693!3d18.9811596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x80dbfa832c9e69f2!2sLala%20Lajpat%20Rai%20College%20of%20Commerce%20and%20Economics!5e0!3m2!1sen!2sin!4v1612192267579!5m2!1sen!2sin"#}
-                            {#                                frameborder="0" height="400" style="border:0; border-radius: 10px" allowfullscreen=""#}
-                            {#                                aria-hidden="false" tabindex="0"></iframe>#}
                         </div>
 
                     </div>
@@ -196,7 +251,8 @@
                                 </div>
                                 <div class="form-group mb-3 ">
                                     <input type="password" name="password" class="form-control"
-                                           placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"
+                                           placeholder="Password" aria-label="Username"
+                                           aria-describedby="basic-addon1"
                                            id="password-field-with-count"
                                            onkeyup="$('.password_digit_count').text('&nbsp;&nbsp;Count: ' + $('#password-field-with-count').val().length)">
                                     <p class="mt-1 text-muted password_digit_count">&nbsp&nbspCount: 0</p>
@@ -236,4 +292,5 @@
             </div>
         </div>
     </div>
+    <br><br>
 {% endblock %}

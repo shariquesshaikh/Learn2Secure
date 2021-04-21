@@ -15,6 +15,10 @@ def signup():
 def login():
     return render_template('login.html')
 
+@app.route('/basics')
+def basics():
+    return render_template('basics.html')
+
 @app.route('/intermediate')
 def intermediate():
     return render_template('intermediate.html')
@@ -23,6 +27,10 @@ def intermediate():
 def advanced():
     return render_template('advanced.html')
 
+@app.route('/logout')
+def logout():
+    return render_template('index.html')
+
 if __name__ == '__main__':
     # app.run(debug=True)
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8001, debug=True)
