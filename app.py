@@ -1,13 +1,15 @@
+import os
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/signup')
+@app.route('/register')
 def signup():
-    return render_template('signup.html')
+    return render_template('register.html')
 
 @app.route('/login')
 def login():
@@ -22,4 +24,5 @@ def advanced():
     return render_template('advanced.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)
