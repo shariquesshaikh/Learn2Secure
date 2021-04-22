@@ -33,7 +33,6 @@ def register():
                 return redirect(url_for('login'))
     return render_template('register.html')
 
-
 # Login Request
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -52,8 +51,6 @@ def login():
 # Basic Content Page
 @app.route('/basics', methods=['GET', 'POST'])
 def basics():
-    if not session.get('logged_in'):
-        return redirect(url_for('login'))
     return render_template('basics.html')
 
 
