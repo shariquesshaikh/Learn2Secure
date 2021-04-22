@@ -1,11 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        body {
+            background-size: cover !important;
+            background: url('{{ url_for('static',filename='img/background.png') }}') no-repeat fixed center !important;
+        }
+    </style>
+
+    <div class="container-fluid mt-5">
+        <div class="col page-title pb-0 mb-4">
+            <div class="row align-items-center justify-content-center" align="center">
+                <h1 class="font-weight-bolder">Registration</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-0 mb-5">
+        <!-- FORM -->
+        <form action="/register" method="POST" autocomplete="off">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-12 px-lg-3">
+                    <div class="card-custom mt-2 mt-lg-0 help-card">
+                        <h6 class="my-3">Personal Details</h6>
+                        <div class="form-group mb-3 ">
+                            <input type="text" class="form-control" placeholder="Name" aria-label="Name"
+                                   aria-describedby="basic-addon1" name="name" value="" required>
+                        </div>                        
+                        <div class="form-group mb-3 ">
+                            <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                   aria-describedby="basic-addon1" name="email" value="" required>
+                        </div>
+                        <div class="form-group mb-3 ">
+                            <input type="password" name="password" class="form-control" placeholder="Password"
+                                   aria-label="Username" aria-describedby="basic-addon1" id="password-field-with-count"
+                                   value=""
+                                   onkeyup="$('.password_digit_count').text('&nbsp;&nbsp;Count: ' + $('#password-field-with-count').val().length)"
+                                   required>
+                            <p class="mt-1 text-sm text-muted password_digit_count">&nbsp;&nbsp;Count: 0</p>
+                            <div class="alert alert-warning mt-2" role="alert">
+                                <p class="text-muted">Your password must contain atleast 6 characters.</p>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 ">
+                            <input type="password" class="form-control" placeholder="Confirm Password"
+                                   aria-label="Username" aria-describedby="basic-addon1" name="cpassword" value=""
+                                   required>
+                        </div>
+                        <!-- BUTTON -->
+                        <div style="text-align: center" class=" mb-3 ">
+                            <button class="btn btn-outline-primary" type="submit" style="width: 100%">Register</button>
+                        </div>
+                        <div style="text-align: center" class=" mb-3  ">
+                            <p>Already have an account?
+                                <a href="/login">Login</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- FORM -->
+    </div>
+{% endblock %}

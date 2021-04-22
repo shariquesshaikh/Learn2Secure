@@ -1,11 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+    <style>
+        body {
+            background-size: cover !important;
+            background: url('{{ url_for('static',filename='img/background.png') }}') no-repeat fixed center !important;
+        }
+    </style>
+
+    <div class="container-fluid mt-5">
+        <div class="col page-title">
+            <div class="row align-items-center justify-content-center" align="center">
+                <h1 class="font-weight-bolder">Intermediate</h1>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <h6>You are not far away now!</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-0">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-12 px-lg-3">
+                <div class="card-custom mt-lg-0 help-card">
+                    <h6 class="my-3" style=""></h6>
+                    <div class="so-accordion-wrapper">
+                        <div class="so-tab">
+                            <input id="so-tab-1" type="checkbox" name="tabs" checked>
+                            <label for="so-tab-1">1. Introduction to Cyber Security</label>
+                            <div class="so-tab-content">
+                                <p style="color: rgb(0, 0, 0); font-family: verdana, helvetica, arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+                                    &quot;Cybersecurity is primarily about people, processes, and technologies working
+                                    together to encompass the full range of threat reduction, vulnerability reduction,
+                                    deterrence, international engagement, incident response, resiliency, and recovery
+                                    policies and activities, including computer network operations, information
+                                    assurance, law enforcement, etc.&quot;</p><br>
+                                <p style="color: rgb(0, 0, 0); font-family: verdana, helvetica, arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+                                    Cybersecurity is the protection of Internet-connected systems, including hardware,
+                                    software, and data from cyber attacks. It is made up of two words one is cyber and
+                                    other is security. Cyber is related to the technology which contains systems,
+                                    network and programs or data. Whereas security related to the protection which
+                                    includes systems security, network security and application and information
+                                    security.</p><br>
+                                <p style="color: rgb(0, 0, 0); font-family: verdana, helvetica, arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+                                    It is the body of technologies, processes, and practices designed to protect
+                                    networks, devices, programs, and data from attack, theft, damage, modification or
+                                    unauthorized access. It may also be referred to as&nbsp;<strong
+                                        style="color: rgba(0, 0, 0, 0.75);">information technology security</strong>.
+                                </p><br><br>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" style="border-radius: 10px"
+                                            src="https://www.youtube.com/embed/-S3MsuXv0OY"
+                                            allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <a href="">Any Links here</a>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="so-tab"><input id="so-tab-3" type="checkbox" name="tabs"> <label
+                                for="so-tab-3">2. Features of Cyber Security</label>
+                            <div class="so-tab-content">
+                                <p class="text-muted">
+                                    Lesssseeee
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/><br/>
+
+{% endblock %}

@@ -1,11 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+    <style>
+        body {
+            background-size: cover !important;
+            background: url('{{ url_for('static',filename='img/background.png') }}') no-repeat fixed center !important;
+        }
+    </style>
+
+    <div class="container-fluid mt-3">
+        <div class="col page-title">
+            <div class="row align-items-center justify-content-center" align="center">
+                <h1 class="font-weight-bolder">Login</h1>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <h6>Login to access your dashboard</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-0">
+        <!-- FORM -->
+        <form action="/login" method="post">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-12 px-lg-3">
+                    <div class="card-custom mt-lg-0 help-card">
+                        <h6 class="my-3" style="">Enter your credentials</h6>
+                        <label for="exampleFormControlFile1">Email</label>
+                        <div class="form-group mb-3 ">
+                            <input type="email" name="email" class="form-control" placeholder="Email"
+                                   aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <label for="exampleFormControlFile1">Password</label>
+                        <div class="form-group mb-3 ">
+                            <input type="password" name="password" class="form-control" placeholder="Password"
+                                   aria-label="Username" aria-describedby="basic-addon1" id="password-field-with-count"
+                                   onkeyup="$('.password_digit_count').text('&nbsp;&nbsp;Count: ' + $('#password-field-with-count').val().length)">
+                            <p class="mt-1 text-muted password_digit_count">&nbsp&nbspCount: 0</p>
+                        </div>
+                        <!-- BUTTON -->
+                        <div style="text-align: center" class=" mb-3 ">
+                            <button class="btn btn-outline-primary" type="submit" style="width: 100%">Login</button>
+                        </div>
+                        <div style="text-align: center" class=" mb-1">
+                            <p>Don't have an account? <a href="/register">Register</a></p>
+                        </div>
+                        <div style="text-align: center" class=" mb-3">
+                            <p><a href="/forgot_password">Forgot Your Password?</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+        <!-- END FORM -->
+    </div>
+
+    <br/><br/>
+
+{% endblock %}
