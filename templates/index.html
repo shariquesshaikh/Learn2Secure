@@ -6,7 +6,7 @@
         <div class="row align-items-center mb-1 mt-lg-5" align="center">
             <div class="col">
                 <h2 class="font-weight-bold" style="color:#212529; text-align: center">
-                    Welcome!
+                    Welcome{% if 'logged_in' in session %} {{ name }}{% endif %}!
                 </h2>
                 <!-- <h2 class="font-weight-bold" style="color:#212529; text-align: center">
                     Welcome!
@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        <div style="text-align: center"><h5>Select your level and get started! </h5></div>
+        <div style="text-align: center"><h5>Select your level and get started. </h5></div>
         <div class="row justify-content-center mb-3">
             <div class="col-lg-4 col-md-4 col-6">
                 <a href="/basics">
@@ -89,7 +89,12 @@
                         <div>
                             <img src="{{ url_for('static',filename='img/black.jpg') }}" class="options-img"/>
                         </div>
-                        <div class="options-title p-2"><span class="fas fa-star"></span><span
+                        <div class="options-title p-2">
+{#                            {% if not 'logged_in' in session %}#}
+{#                            <i class="fa fa-lock"></i>#}
+{#                            <br>#}
+{#                            {% endif %}#}
+                            <span class="fas fa-star"></span><span
                                 class="fas fa-star"></span><span class="far fa-star"></span><br>
                             Intermediate
                         </div>
@@ -190,34 +195,34 @@
                         <span class="jump-link" id="faq"></span>
                         <div class="card-block">
                             <h5 class="card-custom-title mb-4">FAQs</h5> -->
-                            <!-- Begin Accordion Snippet -->
-                            <!-- <div class="so-accordion-wrapper">
-                                <div class="so-tab">
-                                    <input id="so-tab-1" type="checkbox" name="tabs">
-                                    <label for="so-tab-1">What is the purpose of Learn2Secure?</label>
-                                    <div class="so-tab-content">
-                                        <p class="text-muted">
-                                            Purpose
-                                        </p>
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="so-tab"><input id="so-tab-3" type="checkbox" name="tabs"> <label
-                                        for="so-tab-3">What
-                                    is the objective of Learn2Secure?</label>
-                                    <div class="so-tab-content">
-                                        <p class="text-muted">
-                                            The objectives of this portal are:
-                                        <ul class="text-muted">
-                                            <li>Objective NO. 1</li>
-                                        </ul>
-                                        </p>
-                                        <br>
-                                    </div>
-                                </div>
+                    <!-- Begin Accordion Snippet -->
+                    <!-- <div class="so-accordion-wrapper">
+                        <div class="so-tab">
+                            <input id="so-tab-1" type="checkbox" name="tabs">
+                            <label for="so-tab-1">What is the purpose of Learn2Secure?</label>
+                            <div class="so-tab-content">
+                                <p class="text-muted">
+                                    Purpose
+                                </p>
+                                <br>
                             </div>
                         </div>
-                    </div> -->
+                        <div class="so-tab"><input id="so-tab-3" type="checkbox" name="tabs"> <label
+                                for="so-tab-3">What
+                            is the objective of Learn2Secure?</label>
+                            <div class="so-tab-content">
+                                <p class="text-muted">
+                                    The objectives of this portal are:
+                                <ul class="text-muted">
+                                    <li>Objective NO. 1</li>
+                                </ul>
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
                     <!-- <div class="card-custom p-4 mb-4">
                         <span class="jump-link" id="contact"></span>
                         <div class="card-block">
@@ -295,5 +300,4 @@
             </div> -->
         </div>
     </div>
-    <br><br>
 {% endblock %}
